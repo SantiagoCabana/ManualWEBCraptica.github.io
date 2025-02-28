@@ -2,32 +2,73 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Certificación Online</title>
     
-    <title>Protocolos</title>
-    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/Xf6dcvL1/letra-r.png">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    
+    <!-- Estilos personalizados -->
     <link rel="stylesheet" href="style.css">
-    
 </head>
 <body>
-    <div class="container">
-        <h1>Manual de Usuario</h1>
-        <p>Bienvenido al manual de usuario. Aquí encontrarás toda la información necesaria para utilizar el sistema.</p>
-        
-        <h2>Sección 1: Introducción</h2>
-        <p>Explicación general del funcionamiento del sistema.</p>
-        <img src="imagen1.jpg" alt="Ejemplo de imagen">
-        
-        <div class="note">
-            <strong>Nota:</strong> Recuerda leer todas las secciones detenidamente para evitar errores.
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-dark d-md-none">
+        <button class="btn btn-outline-light" id="sidebarToggle">☰ Menú</button>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h5 class="text-light">Menú</h5>
         </div>
-        
-        <h2>Sección 2: Instalación</h2>
-        <p>Pasos para instalar y configurar el sistema correctamente.</p>
-        
-        <div class="alert">
-            <strong>Alerta:</strong> No apagues el equipo durante la instalación, ya que esto podría dañar los archivos.
+        <a href="#">Inicio</a>
+        <a href="#">Cursos</a>
+        <a href="#">Contacto</a>
+        <a class=".text-danger" id="closeSidebar">Cerrar</a>
+    </div>
+
+    <!-- Contenido Principal -->
+    <div class="content">
+        <div class="container">
+            <h1>Certificación Online</h1>
+            <p>En esta Web aprenderás el paso a paso de qué hacer en caso de que pidan certificados personalizados.</p>
+            
+            <h2>Paso 1: Captura de Datos</h2>
+            <p>Explicación general del funcionamiento del sistema.</p>
+            <img src="imagen1.jpg" alt="Ejemplo de captura de datos" class="img-fluid rounded">
+            
+            <div class="note">
+                <strong>Nota:</strong> Recuerda leer todas las secciones detenidamente para evitar errores.
+            </div>
+            
+            <h2>Paso 2: Instalación</h2>
+            <p>Pasos para instalar y configurar el sistema correctamente.</p>
+            
+            <div class="alert">
+                <strong>Alerta:</strong> No apagues el equipo durante la instalación, ya que esto podría dañar los archivos.
+            </div>
         </div>
     </div>
+
+    <!-- Scripts de Bootstrap 5 y jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Script personalizado -->
+    <script>
+        document.getElementById('sidebarToggle').addEventListener('click', function () {
+            document.getElementById('sidebar').classList.add('active');
+        });
+
+        document.getElementById('closeSidebar').addEventListener('click', function () {
+            document.getElementById('sidebar').classList.remove('active');
+        });
+    </script>
+
 </body>
 </html>

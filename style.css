@@ -1,14 +1,82 @@
-
+/* General */
 body {
     font-family: Arial, sans-serif;
     background-color: #1a2530;
     color: #d1d9e6;
     margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #343a40 !important;
+    justify-content: end;
+}
+.navbar-brand {
+    color: #84c0ff !important;
+    font-weight: bold;
+}
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+#closeSidebar{
+    cursor: pointer;
+}
+
+/* Sidebar (SIEMPRE VISIBLE EN PC, OCULTO EN MÓVILES) */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #343a40;
+    padding-top: 20px;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Sidebar Header (Menú y Botón Cerrar) */
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    display: none; /* La 'X' solo se verá en móviles */
+}
+
+/* Estilos de los enlaces del Sidebar */
+.sidebar a {
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.sidebar a:hover {
+    background: #495057;
+}
+
+/* Estilos del Contenido */
+.content {
+    margin-left: 250px;
     padding: 20px;
+    flex-grow: 1;
 }
 .container {
-    max-width: 800px;
-    margin: auto;
+    max-width: 900px;
     background: #252f3f;
     padding: 20px;
     border-radius: 8px;
@@ -20,7 +88,10 @@ h1, h2 {
 img {
     max-width: 100%;
     border-radius: 5px;
+    margin-top: 10px;
 }
+
+/* Notas y alertas */
 .note {
     background: #2a3b4d;
     padding: 10px;
@@ -35,4 +106,21 @@ img {
     color: #ffadad;
     margin: 10px 0;
     border-radius: 5px;
+}
+
+/* 💻💡 RESPONSIVE (MÓVILES: OCULTAR SIDEBAR) */
+@media (max-width: 768px) {
+    .sidebar {
+        left: -100%;
+        width: 100%;
+    }
+    .sidebar.active {
+        left: 0;
+    }
+    .content {
+        margin-left: 0;
+    }
+    .close-btn {
+        display: block; /* Ahora la 'X' es visible en móviles */
+    }
 }
