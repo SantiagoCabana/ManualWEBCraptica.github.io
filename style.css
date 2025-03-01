@@ -14,16 +14,8 @@ body {
     background-color: #343a40 !important;
     justify-content: end;
 }
-.navbar-brand {
-    color: #84c0ff !important;
-    font-weight: bold;
-}
 .navbar-toggler {
     border-color: rgba(255, 255, 255, 0.1);
-}
-
-#closeSidebar{
-    cursor: pointer;
 }
 
 /* Sidebar (SIEMPRE VISIBLE EN PC, OCULTO EN MÓVILES) */
@@ -31,7 +23,7 @@ body {
     width: 250px;
     height: 100vh;
     background: #343a40;
-    padding-top: 20px;
+    padding-top: 5px;
     position: fixed;
     z-index: 10;
     left: 0;
