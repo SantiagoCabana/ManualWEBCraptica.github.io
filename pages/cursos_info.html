@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cursos Info</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="shortcut icon" href="../resource/icons/manual-de-usuario.ico" />
+</head>
+<body>
+
+    <!-- Navbar (visible solo en móviles) -->
+    <nav class="navbar navbar-dark bg-dark d-md-none">
+        <button class="btn btn-outline-light" id="sidebarToggle">☰ Menú</button>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h5 class="text-light">Menú</h5>
+            <button class="close-btn" id="closeSidebar">&times;</button>
+        </div>
+        <a href="../index.html">Inicio</a>
+        <a href="cursos_info.html">Informacion de Cursos</a>
+        <a href="Certificacion.html">Guia Certificaion</a>
+    </div>
+
+    <!-- Contenido Principal -->
+    <div class="content">
+        <div class="container">
+            <h1>Informacion de Cursos</h1>
+            <h2>Cantidad de paginas de cada curso:</h2>
+            <p>Cada Curso tiene una cantidad especial de paginas lo cual algunos tendra cierta cantidad de paginas diferente</p>
+            <img src="../resource/images/CantidadHojasCursos.png" alt="Ejemplo de captura de datos" class="img-fluid rounded">
+            
+            <div class="note-alert">
+                <strong>Nota:</strong> La mayoria de los cursos Online tienen <strong>5</strong> paginas <br>y en los Diplomados Virtuales es <strong>4</strong>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Scripts de Bootstrap 5 y jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Script personalizado -->
+    <script>
+        document.getElementById('sidebarToggle').addEventListener('click', function () {
+            document.getElementById('sidebar').classList.add('active');
+        });
+
+        document.getElementById('closeSidebar').addEventListener('click', function () {
+            document.getElementById('sidebar').classList.remove('active');
+        });
+    </script>
+
+</body>
+</html>

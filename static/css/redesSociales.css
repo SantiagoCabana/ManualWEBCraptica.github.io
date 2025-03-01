@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus,
+*:active {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Fondo y estilo general del wrapper */
+.wrapper {
+    background: #252f3f; /* Coincide con el fondo del contenido */
+    padding: 50px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* Iconos con la nueva paleta de colores */
+.wrapper .icon {
+  position: relative;
+  background-color: #2a3b4d; /* Fondo oscuro */
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 22px;
+  display: inline-block;
+  align-items: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  color: #d1d9e6; /* Texto claro para contraste */
+  text-decoration: none;
+}
+
+/* Tooltips con el nuevo diseño */
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  line-height: 1.5;
+  font-size: 14px;
+  background-color: #2a3b4d;
+  color: #d1d9e6;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: #2a3b4d;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Estilos de hover con la paleta de colores */
+.wrapper .icon:hover {
+  background-color: #84c0ff; /* Azul claro en hover */
+  color: #1a2530;
+}
+
+.wrapper .icon:hover .tooltip,
+.wrapper .icon:hover .tooltip::before {
+  background-color: #84c0ff;
+  color: #1a2530;
+}
+
+/* Estilos individuales de hover para cada red social */
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background-color: #1877F2;
+  color: #ffffff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background-color: #1DA1F2;
+  color: #ffffff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background-color: #E1306C;
+  color: #ffffff;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background-color: #6e5494;
+  color: #ffffff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background-color: #FF0000;
+  color: #ffffff;
+}
